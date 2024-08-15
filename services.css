@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgba(233, 231, 231, 0.888);
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+header button{
+    border: none;
+    background-color: transparent;
+    display: gird;
+    place-items: center;
+    cursor: pointer;
+    position: relative;
+}
+.editor small{
+    font-size: 1rem;
+}
+
+.editor{
+    font-weight: 500;
+    font-size: larger;
+}
+    
+.line{
+    position: relative;
+    transition: 1s ease;
+}
+.line::after{
+    content: " ";
+    position: absolute;
+    top: 35%;
+    height: 20px;
+    width: 1px;
+    background: gray;
+}
+.line-container a{
+    display: inline-block;
+}
+.line-container:hover.line-container a{
+    transform: scale(1.05);
+}
+
+.links a{
+    color: black ;
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+
+
+.main-container{
+    position: relative;
+    min-height: 100vh;
+}
+.main-container::after{
+    content: " ";
+    width: 100vw;
+    height: 1px;
+    background-color: gray;
+}
+
+.cards{
+    align-items: center;
+    height: 350px;
+    width: 300px;
+    box-shadow: 0 0 5px gray;
+    transition: 0.5s ease;
+}
+.cards i{
+    font-size: 40px;
+    color: gray;
+}
+.cards:hover{
+    transform: translate(0,-5px);
+}
+
+
+ul{
+    color: gray;
+}
+.underline{
+    position: relative;
+}
+.underline::after{
+    content: " ";
+    position:absolute;
+    right: 0;
+    width:100%;
+    height: 2px;
+    background-color: gray;
+}
+
+footer i{
+    font-size: 30px;
+    color: gray;
+}
+footer i:hover{
+    color: black;
+}
+
+@media(max-width:768px){
+    
+    #nav-bar{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 300px;
+        height: 80vh;
+        background-color: aliceblue;
+        box-shadow: 0 0 2px gray;
+        z-index: 1;
+    }
+    .links{
+        justify-content: center;
+    }
+    .line::after{
+        display: none;
+    }
+    .line::before{
+        position: absolute;
+        content: " ";
+        width: 100%;
+        height: 1px;
+        background-color: gray;
+        bottom: 0;
+    }
+    #xmark{
+        display: none;
+    }
+    #bar{
+        display: flex;
+    }
+
+}
