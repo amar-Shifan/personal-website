@@ -30,6 +30,7 @@ let text = document.getElementById("text");
 console.log(text)
 
 const textLoad =  ()=>{
+
     
     setTimeout(()=>{
         text.textContent = "Developer";
